@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--日本語で書きます-->
+<html lang = "ja">
+<!--いちいち文章事に設定するのはめんどくさいので基板となるhtml(base.html)を作成して他のファイルに移す-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initail-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+    <title>Todoリスト</title>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light p-3">
+        <a class="navbar-bland pl-3" href="/" style="font-size: 2rem;">ToDoList</a>
+    </nav>
+   {% block body %}{% endblock %}
+</body>
+</html>
